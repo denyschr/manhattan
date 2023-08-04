@@ -1,0 +1,59 @@
+.hero{
+	padding-bottom: 120px;
+	@include small-tablet{
+		padding-bottom: 80px;
+	}
+	&__inner{
+		display: flex;
+		@include small-desktop{
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	&__wrap-content{
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		max-width: 856px;
+		min-height: 540px;
+		margin-right: 24px;
+		border-radius: 5px;
+		@include small-desktop{
+			max-width: 100%;
+			min-height: 630px;
+			margin-right: 0;
+			margin-bottom: 20px;
+		}
+		@include small-tablet{
+			min-height: 560px;
+		}
+	}
+	&__content{
+		margin-top: auto;
+		padding: 45px 173px 45px 60px;
+		@include small-desktop{
+			padding: 45px 173px 120px 60px;
+		}
+		@include small-tablet{
+			padding: 45px 30px 80px 60px;
+		}
+		@include mobile{
+			padding: 45px 15px 80px 20px;
+		}
+	}
+	&__caption{
+		margin-bottom: 30px !important;
+	}
+	&__title{
+		margin: 0;
+	}
+	&__button-link{
+		display: none !important;
+		@include mobile{
+			display: inline-block !important;
+		}
+	}
+}

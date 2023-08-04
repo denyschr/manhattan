@@ -1,0 +1,114 @@
+.techrider{
+	&__inner{
+		display: flex;
+		justify-content: center;
+		@include tablet{
+			flex-direction: column-reverse;
+			align-items: center;
+		}
+	}
+	&__title{
+		margin: 0;
+	}
+}
+
+.techrider__team{
+	max-width: 416px;
+	@include tablet{
+		max-width: 100%;
+		width: 80%;
+		margin-bottom: 45px;
+	}
+	&-item{
+		@include tablet{
+			margin: 0 auto;
+		}
+	}
+	&-title, &-name{
+		@extend %gp-bold;
+		color: var(--white);
+		line-height: 1.5;
+		text-transform: uppercase;
+	}
+	&-title{
+		margin: 0 0 50px;
+		font-size: 32px;
+		letter-spacing: 1.6px;
+		@include small-tablet{
+			margin: 0 0 40px;
+			font-size: 26px;
+		}
+		@include mobile{
+			margin: 0 0 30px;
+			font-size: 20px;
+		}
+	}
+	&-list{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 24px;
+		@include mobile{
+			grid-template-columns: repeat(1, 1fr);
+			row-gap: 34px;
+		}
+	}
+	&-img{
+		margin-bottom: 30px;
+		border-radius: 5px;
+		@include tablet{
+			width: 90%;
+			margin: 0 auto 30px;
+		}
+		@include mobile{
+			width: 70%;
+			margin: 0 auto 30px;
+		}
+	}
+	&-name{
+		display: inline-block;
+		margin-bottom: 25px;
+		font-size: 14px;
+		letter-spacing: 0.7px;
+		@include tablet{
+			font-size: 22px;
+		}
+	}
+	&-socials{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 25px;
+	}
+	&-link{
+		position: relative;
+		width: 40px;
+		height: 40px;
+		border-radius: 5px;
+		border: 2px solid var(--hot-accent);
+		background: transparent;
+		transition: background .2s ease-in-out;
+		&::before{
+			content: '';
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			width: 20px;
+			height: 20px;
+		}
+		@include for-desktop{
+			&:hover{
+				background: var(--hot-accent);
+			}
+		}
+	}
+	&-link:nth-child(1)::before{
+		background-image: url('../images/svg/vk.svg');
+	}
+	&-link:nth-child(2)::before{
+		background-image: url('../images/svg/telegram.svg');
+	}
+}

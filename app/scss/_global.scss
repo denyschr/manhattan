@@ -1,0 +1,172 @@
+html {
+  height: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, li{
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-size: inherit;
+}
+
+img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+body{
+  height: 100%;
+  overflow-x: hidden;
+  background-color: var(--black);
+  @extend %sl-regular;
+}
+
+.overlay{
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.main{
+  flex-grow: 1;
+}
+
+.noscroll{
+  overflow-y: hidden;
+}
+
+.visually-hidden{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container{
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.button{
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 5px;
+  border: 2px solid var(--hot-accent);
+  color: var(--white);
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  transition: background .2s ease-in-out;
+  @media (min-width: 1025px){
+    &:hover{
+      background: rgba(213, 98, 29, 0.6);
+    }
+  }
+}
+
+.list-reset{
+  margin: 0;
+  padding: 0;
+}
+
+.section-offset{
+  padding-bottom: 150px;
+  @media (max-width: 1100px){
+    padding-bottom: 100px;
+  }
+  @media (max-width: 768px){
+    padding-bottom: 80px;
+  }
+}
+
+.box-offset{
+  margin-bottom: 80px;
+  @media (max-width: 768px){
+    margin-bottom: 50px;
+  }
+}
+
+.main-title{
+  @extend %gp-bold;
+  color: var(--white);
+  font-size: 40px;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  @media (max-width: 768px){
+    font-size: 34px;
+  }
+  @media (max-width: 576px){
+    font-size: 30px;
+  }
+  @media (max-width: 400px){
+    font-size: 26px;
+  }
+}
+
+.title{
+  @extend %gp-bold;
+  color: var(--white);
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+  @media (max-width: 768px){
+    font-size: 14px;
+  }
+}
+
+.caption, .text{
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.caption{
+  display: inline-block;
+  padding: 10px 20px 7px;
+  margin-bottom: 40px;
+  border-radius: 5px;
+  background-color: var(--white);
+  @extend %gp-bold;
+  color: var(--black);
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  @media (max-width: 768px){
+    margin-bottom: 25px;
+  }
+}
+
+.text{
+  color: var(--white);
+  @media (max-width: 768px){
+    font-size: 12px;
+  }
+}
+
+.text-center{
+  text-align: center;
+}

@@ -1,0 +1,28 @@
+%sl-regular{
+	font-family: 'Stolzl', sans-serif;
+	font-weight: 400;
+}
+
+%gp-bold{
+	font-family: 'Gotham Pro', sans-serif;
+	font-weight: 700;
+}
+
+%gp-black{
+	font-family: 'Gotham Pro', sans-serif;
+	font-weight: 800;
+}
+
+
+:root{
+	/*Base*/
+	--content-width: 1305px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+	--header-height: 129px;
+
+	/*Colors*/
+	--white: #fff;
+	--black: #210e09;
+	--hot-accent: #d5621d;
+}
