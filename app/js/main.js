@@ -89,7 +89,7 @@ mm.add("(min-width: 1101px)", () => {
 		}
 	)
 		.fromTo(
-		'.ads .ads__link',
+		'.parties .parties__link',
 		{
 			scale: 0,
 			opacity: 0,
@@ -209,12 +209,36 @@ mm.add("(min-width: 1101px)", () => {
 			trigger: '.catalog__slider',
 			start: '-30% center',
 			end: '+=500px',
-			stagger: 0.20,
 		},
 		scale: 0,
 		transformOrigin: 'top center',
 		duration: 1,
+		stagger: 0.20,
 	});
+
+	gsap.from('.swiper-button-next', {
+		scrollTrigger: {
+			trigger: '.catalog__slider',
+			start: '5% center',
+			end: '+=500px',
+		},
+		opacity: 0,
+		duration: 1,
+	},
+	1
+	);
+
+	gsap.from('.swiper-button-prev', {
+		scrollTrigger: {
+			trigger: '.catalog__slider',
+			start: '5% center',
+			end: '+=500px',
+		},
+		opacity: 0,
+		duration: 1,
+	},
+	1
+	);
 
 	gsap.from('.catalog__button-link', {
 		scrollTrigger: {
