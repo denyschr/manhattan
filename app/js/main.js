@@ -20,6 +20,30 @@ navItems.forEach(el => {
 	});
 });
 
+const tabBtn = document.querySelectorAll('.tabs__btn');
+const tabContent = document.querySelectorAll('.tabs__content');
+
+tabBtn.forEach(function (element){
+	element.addEventListener('click', open);
+})
+
+function open(evt){
+	const tabTarget = evt.currentTarget;
+	const button = tabTarget.dataset.button;
+
+	tabBtn.forEach(function (item){
+		item.classList.remove('tabs__btn--active');
+	})
+
+	tabTarget.classList.add('tabs__btn--active');
+
+	tabContent.forEach(function (item){
+		item.classList.remove('tabs__content--active');
+	});
+
+	document.querySelector(`#${button}`).classList.add('tabs__content--active');
+}
+
 gsap.config({
 	nullTargetWarn: false,
 });
@@ -308,30 +332,6 @@ mm.add("(min-width: 1101px)", () => {
 	});
 
 });
-
-const tabBtn = document.querySelectorAll('.tabs__btn');
-const tabContent = document.querySelectorAll('.tabs__content');
-
-tabBtn.forEach(function (element){
-	element.addEventListener('click', open);
-})
-
-function open(evt){
-	const tabTarget = evt.currentTarget;
-	const button = tabTarget.dataset.button;
-
-	tabBtn.forEach(function (item){
-		item.classList.remove('tabs__btn--active');
-	})
-
-	tabTarget.classList.add('tabs__btn--active');
-
-	tabContent.forEach(function (item){
-		item.classList.remove('tabs__content--active');
-	});
-
-	document.querySelector(`#${button}`).classList.add('tabs__content--active');
-}
 
 const swiper = new Swiper(".catalog__slider", {
 	navigation: {
