@@ -1,4 +1,4 @@
-# [Multipage website](https://dchornoivanenko.github.io/manhattan/) for a restaurant complex
+# [Multipage website](https://denyschr.github.io/manhattan/) for a restaurant complex
 ## What I used for creating the website:
 - HTML
 - CSS
